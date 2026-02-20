@@ -1,0 +1,8 @@
+services:
+  jirig-shop:
+    build: .
+    image: jirig-shop:latest
+    container_name: jirig-shop
+    ports:
+      - "3001:80"
+    restart: unless-stopped
