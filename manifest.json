@@ -1,11 +1,11 @@
 {
-    "name": "jirig_web_app",
-    "short_name": "jirig_web_app",
+    "name": "Jirig Shop",
+    "short_name": "Jirig Shop",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#0051BA",
+    "theme_color": "#0051BA",
+    "description": "Jirig Shop - Meubles et décoration de qualité",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
