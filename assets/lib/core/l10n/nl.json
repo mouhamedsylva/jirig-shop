@@ -90,5 +90,22 @@
   "category_desks": "Bureaus",
   "category_storage": "Opslag",
   "category_beds": "Bedden",
-  "category_kitchen": "Keuken"
+  "category_kitchen": "Keuken",
+  "login_forgot_password": "Wachtwoord vergeten?",
+  "forgot_password_title": "Wachtwoord vergeten?",
+  "forgot_password_subtitle": "Voer uw e-mailadres in om een herstellink te ontvangen.",
+  "forgot_password_email_label": "E-mailadres",
+  "forgot_password_email_hint": "uw@email.com",
+  "forgot_password_email_error_empty": "E-mail vereist",
+  "forgot_password_email_error_invalid": "Ongeldig e-mailadres",
+  "forgot_password_button": "Link versturen",
+  "forgot_password_success_title": "E-mail verzonden!",
+  "forgot_password_success_body": "Als er een account bestaat voor {email}, is er een herstel-e-mail naar u verzonden.",
+  "forgot_password_back_to_login": "Terug naar inloggen",
+  "login_email_label": "E-mailadres",
+  "login_password_label": "Wachtwoord",
+  "login_button": "Inloggen",
+  "login_or": "of",
+  "login_no_account": "Nog geen account?",
+  "login_register_link": "Registreren"
 }

@@ -90,5 +90,22 @@
   "category_desks": "Bureaux",
   "category_storage": "Rangement",
   "category_beds": "Lits",
-  "category_kitchen": "Cuisine"
+  "category_kitchen": "Cuisine",
+  "login_forgot_password": "Mot de passe oublié ?",
+  "forgot_password_title": "Mot de passe oublié ?",
+  "forgot_password_subtitle": "Entrez votre adresse e-mail pour recevoir un lien de réinitialisation.",
+  "forgot_password_email_label": "Adresse e-mail",
+  "forgot_password_email_hint": "votre@email.com",
+  "forgot_password_email_error_empty": "Email requis",
+  "forgot_password_email_error_invalid": "Email invalide",
+  "forgot_password_button": "Envoyer le lien",
+  "forgot_password_success_title": "Email envoyé !",
+  "forgot_password_success_body": "Si un compte existe pour {email}, un email de réinitialisation vous a été envoyé.",
+  "forgot_password_back_to_login": "Retour à la connexion",
+  "login_email_label": "Adresse e-mail",
+  "login_password_label": "Mot de passe",
+  "login_button": "Se connecter",
+  "login_or": "ou",
+  "login_no_account": "Pas de compte ?",
+  "login_register_link": "S'inscrire"
 }
