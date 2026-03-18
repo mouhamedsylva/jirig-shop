@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -18,22 +19,26 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Optimisez vos achats avec JIRIG Shop. Mandataire indépendant, nous achetons et livrons vos articles (IKEA® et autres références) depuis les marchés européens vers votre domicile en Belgique.">
-  <meta name="keywords" content="JIRIG, shopping, mandataire, Europe, Belgique, livraison, IKEA, achat en ligne, transport de colis">
+  <meta name="description"
+    content="Optimisez vos achats avec JIRIG Shop. Mandataire indépendant, nous achetons et livrons vos articles (IKEA® et autres références) depuis les marchés européens vers votre domicile en Belgique.">
+  <meta name="keywords"
+    content="JIRIG, shopping, mandataire, Europe, Belgique, livraison, IKEA, achat en ligne, transport de colis">
   <meta name="author" content="JIRIG Shop">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jirig.shop/">
   <meta property="og:title" content="JIRIG Shop | Votre mandataire pour vos achats en Europe">
-  <meta property="og:description" content="Faites vos achats en Europe en toute simplicité. Nous achetons et livrons vos articles préférés chez vous en Belgique.">
+  <meta property="og:description"
+    content="Faites vos achats en Europe en toute simplicité. Nous achetons et livrons vos articles préférés chez vous en Belgique.">
   <meta property="og:image" content="https://jirig.shop/icons/Icon-512.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://jirig.shop/">
   <meta property="twitter:title" content="JIRIG Shop | Votre mandataire pour vos achats en Europe">
-  <meta property="twitter:description" content="Faites vos achats en Europe en toute simplicité. Nous achetons et livrons vos articles préférés chez vous en Belgique.">
+  <meta property="twitter:description"
+    content="Faites vos achats en Europe en toute simplicité. Nous achetons et livrons vos articles préférés chez vous en Belgique.">
   <meta property="twitter:image" content="https://jirig.shop/icons/Icon-512.png">
 
   <!-- iOS meta tags & icons -->
@@ -43,26 +48,26 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>JIRIG Shop | Votre mandataire pour vos achats en Europe & Livraison en Belgique</title>
   <link rel="manifest" href="manifest.json">
 
   <script>
     // Dynamically update SEO tags based on current domain (jirig.be, jirig.shop, jirig.com)
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
       var currentOrigin = window.location.origin;
       var canonicalUrl = currentOrigin + '/';
-      
+
       // Update og:url and twitter:url
       var urlTags = document.querySelectorAll('meta[property$="url"]');
-      urlTags.forEach(function(tag) {
+      urlTags.forEach(function (tag) {
         tag.setAttribute('content', canonicalUrl);
       });
 
       // Update og:image and twitter:image to be absolute based on current domain
       var imageTags = document.querySelectorAll('meta[property$="image"]');
-      imageTags.forEach(function(tag) {
+      imageTags.forEach(function (tag) {
         var content = tag.getAttribute('content');
         if (content && content.includes('/icons/')) {
           var iconPath = content.substring(content.indexOf('/icons/'));
@@ -73,18 +78,19 @@
   </script>
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/69baa6fd25f53e1c37bb8bd6/1jk0hojqh';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-  })();
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/69baa6fd25f53e1c37bb8bd6/1jk0hojqh';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
   </script>
-<!--End of Tawk.to Script-->
+  <!--End of Tawk.to Script-->
 </head>
+
 <body>
   <!--
     You can customize the "flutter_bootstrap.js" script.
@@ -96,4 +102,5 @@
   -->
   <script src="flutter_bootstrap.js" async></script>
 </body>
+
 </html>
