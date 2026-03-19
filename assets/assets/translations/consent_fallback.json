@@ -1,0 +1,19 @@
+{
+  "CONSENT_BANNER_TITLE": "Nous respectons votre vie privée",
+  "CONSENT_BANNER_DESCRIPTION": "Nous utilisons des cookies pour améliorer votre expérience et analyser notre trafic. Choisissez vos préférences ci-dessous.",
+  "CONSENT_ACCEPT_ALL": "Accepter tout",
+  "CONSENT_REJECT": "Refuser",
+  "CONSENT_SETTINGS": "Paramètres",
+  "CONSENT_SETTINGS_TITLE": "Paramètres de confidentialité",
+  "CONSENT_SETTINGS_DESCRIPTION": "Gérez vos préférences de cookies. Vous pouvez modifier ces paramètres à tout moment depuis le pied de page.",
+  "CONSENT_CANCEL": "Annuler",
+  "CONSENT_SAVE": "Enregistrer",
+  "CONSENT_REQUIRED": "Requis",
+  "CONSENT_FUNCTIONAL_TITLE": "Cookies fonctionnels",
+  "CONSENT_FUNCTIONAL_DESCRIPTION": "Ces cookies sont essentiels au fonctionnement du site. Ils permettent la navigation, l'authentification et le panier d'achat.",
+  "CONSENT_ANALYTICS_TITLE": "Cookies d'analyse",
+  "CONSENT_ANALYTICS_DESCRIPTION": "Ces cookies nous aident à comprendre comment vous utilisez notre site pour l'améliorer. Données anonymisées via Google Analytics.",
+  "CONSENT_MARKETING_TITLE": "Cookies marketing",
+  "CONSENT_MARKETING_DESCRIPTION": "Ces cookies permettent de personnaliser les publicités et offres promotionnelles selon vos intérêts.",
+  "FOOTER_COOKIE_SETTINGS": "Paramètres des cookies"
+}
