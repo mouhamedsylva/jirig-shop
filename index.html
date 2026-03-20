@@ -76,10 +76,43 @@
       });
     });
   </script>
+  <!-- Hide Tawk.to on mobile devices -->
+  <style>
+    @media (max-width: 767px) {
+      #tawk-bubble-container, 
+      #tawk-chat-container, 
+      .tawk-app, 
+      .tawk-minimized, 
+      .tawk-maximized, 
+      iframe[title="chat widget"] {
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+    }
+  </style>
+
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    
+    // Définir la condition mobile (seuil standard 768px ou agent mobile)
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+
+    // Fallback : Masquer le widget via l'API si le chargement n'a pas été empêché
+    Tawk_API.onLoad = function() {
+      if (isMobile || window.innerWidth < 768) {
+        Tawk_API.hideWidget();
+      }
+    };
+
     (function () {
+      // Ne pas charger le script Tawk.to du tout sur les appareils mobiles
+      if (isMobile) {
+        console.log('Tawk logic initialization: Bypassing Tawk on mobile.');
+        return;
+      }
+
       var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
       s1.async = true;
       s1.src = 'https://embed.tawk.to/69baa6fd25f53e1c37bb8bd6/1jk0hojqh';
