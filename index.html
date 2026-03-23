@@ -53,6 +53,10 @@
   <title>JIRIG Shop | Votre mandataire pour vos achats en Europe & Livraison en Belgique</title>
   <link rel="manifest" href="manifest.json">
 
+  <!-- Google Sign-In -->
+  <meta name="google-signin-client_id" content="VOTRE_CLIENT_ID_WEB.apps.googleusercontent.com">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
   <script>
     // Dynamically update SEO tags based on current domain (jirig.be, jirig.shop, jirig.com)
     window.addEventListener('load', function () {
@@ -89,6 +93,32 @@
         visibility: hidden !important;
         pointer-events: none !important;
       }
+    }
+
+    /* Rendre tous les textes sélectionnables et copiables */
+    * {
+      -webkit-user-select: text !important;
+      -moz-user-select: text !important;
+      -ms-user-select: text !important;
+      user-select: text !important;
+    }
+
+    /* Permettre la sélection sur les éléments Flutter */
+    flt-glass-pane * {
+      -webkit-user-select: text !important;
+      -moz-user-select: text !important;
+      -ms-user-select: text !important;
+      user-select: text !important;
+    }
+
+    /* Curseur texte sur les textes */
+    p, span, div, h1, h2, h3, h4, h5, h6, a, li, td, th, label {
+      cursor: text !important;
+    }
+
+    /* Garder le curseur pointer sur les boutons et liens cliquables */
+    button, a[href], input[type="button"], input[type="submit"] {
+      cursor: pointer !important;
     }
   </style>
 
