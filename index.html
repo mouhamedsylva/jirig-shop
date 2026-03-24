@@ -59,6 +59,33 @@
   <meta name="google-signin-client_id" content="116497000948-90d84akvtp9g4favfmi63ciktp5rbgfu.apps.googleusercontent.com">
   <script src="https://accounts.google.com/gsi/client" async defer></script>
 
+  <!-- Facebook SDK for JavaScript -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1412145146538940',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v21.0'
+      });
+      
+      FB.AppEvents.logPageView();
+      console.log('✅ Facebook SDK initialisé');
+      
+      // Marquer le SDK comme prêt
+      window.fbSDKReady = true;
+    };
+
+    // Charger le SDK Facebook
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/fr_FR/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
   <script>
     // Dynamically update SEO tags based on current domain (jirig.be, jirig.shop, jirig.com)
     window.addEventListener('load', function () {
