@@ -988,6 +988,9 @@
   "WISHLIST_Msg68": "Totale prijs:",
   "WISHLIST_Msg69": "Downloaden",
   "WISHLIST_Msg70": "Delen",
+  "product.status.available": "Beschikbaar",
+  "product.status.packages": "Aantal pakketten",
+  "product.status.title": "Status",
   "YOUR_POSITION": "Mijn locatie",
   "ZONE_COMING_SOON": "Uw regio komt binnenkort"
 }

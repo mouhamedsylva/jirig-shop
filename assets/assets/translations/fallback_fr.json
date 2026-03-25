@@ -709,6 +709,7 @@
   "product.reference": "Réf IKEA:",
   "product.reference_copied": "Référence copiée:",
   "product.status.available": "Disponible",
+  "product.status.packages": "Nombre de colis",
   "product.status.title": "Statut",
   "product_details.title": "Détails du produit",
   "PRODUCTCODE_Msg03": "Scanner un produit",

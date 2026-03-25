@@ -658,5 +658,8 @@
   "WISHLIST_Msg68": "Total price:",
   "WISHLIST_Msg69": "Download",
   "WISHLIST_Msg70": "Share",
+  "product.status.available": "Available",
+  "product.status.packages": "Number of packages",
+  "product.status.title": "Status",
   "YOUR_POSITION": "My location"
 }
