@@ -22,7 +22,7 @@
   <meta name="description"
     content="Optimisez vos achats avec JIRIG Shop. Mandataire indépendant, nous achetons et livrons vos articles (IKEA® et autres références) depuis les marchés européens vers votre domicile en Belgique.">
   <meta name="keywords"
-    content="JIRIG, shopping, mandataire, Europe, Belgique, livraison, IKEA, achat en ligne, transport de colis">
+    content="JIRIG Shop, JIRIG, shopping, mandataire, Europe, Belgique, livraison, IKEA, achat en ligne, transport de colis">
   <meta name="author" content="JIRIG Shop">
 
   <!-- Open Graph / Facebook -->
@@ -56,30 +56,31 @@
   <!-- Google Sign-In Configuration -->
   <!-- IMPORTANT: Remplacez VOTRE_CLIENT_ID par votre vrai Client ID Google -->
   <!-- Obtenez-le depuis: https://console.cloud.google.com/ -->
-  <meta name="google-signin-client_id" content="116497000948-90d84akvtp9g4favfmi63ciktp5rbgfu.apps.googleusercontent.com">
+  <meta name="google-signin-client_id"
+    content="116497000948-90d84akvtp9g4favfmi63ciktp5rbgfu.apps.googleusercontent.com">
   <script src="https://accounts.google.com/gsi/client" async defer></script>
 
   <!-- Facebook SDK for JavaScript -->
   <script>
-    window.fbAsyncInit = function() {
+    window.fbAsyncInit = function () {
       FB.init({
-        appId      : '1412145146538940',
-        cookie     : true,
-        xfbml      : true,
-        version    : 'v21.0'
+        appId: '1412145146538940',
+        cookie: true,
+        xfbml: true,
+        version: 'v21.0'
       });
-      
+
       FB.AppEvents.logPageView();
       console.log('✅ Facebook SDK initialisé');
-      
+
       // Marquer le SDK comme prêt
       window.fbSDKReady = true;
     };
 
     // Charger le SDK Facebook
-    (function(d, s, id){
+    (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {return;}
+      if (d.getElementById(id)) { return; }
       js = d.createElement(s); js.id = id;
       js.src = "https://connect.facebook.net/fr_FR/sdk.js";
       fjs.parentNode.insertBefore(js, fjs);
@@ -112,11 +113,12 @@
   <!-- Hide Tawk.to on mobile devices -->
   <style>
     @media (max-width: 767px) {
-      #tawk-bubble-container, 
-      #tawk-chat-container, 
-      .tawk-app, 
-      .tawk-minimized, 
-      .tawk-maximized, 
+
+      #tawk-bubble-container,
+      #tawk-chat-container,
+      .tawk-app,
+      .tawk-minimized,
+      .tawk-maximized,
       iframe[title="chat widget"] {
         display: none !important;
         visibility: hidden !important;
@@ -128,12 +130,12 @@
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    
+
     // Définir la condition mobile (seuil standard 768px ou agent mobile)
     var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
 
     // Fallback : Masquer le widget via l'API si le chargement n'a pas été empêché
-    Tawk_API.onLoad = function() {
+    Tawk_API.onLoad = function () {
       if (isMobile || window.innerWidth < 768) {
         Tawk_API.hideWidget();
       }
