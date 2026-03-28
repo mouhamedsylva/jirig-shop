@@ -157,6 +157,14 @@
     })();
   </script>
   <!--End of Tawk.to Script-->
+  
+  <script>
+    // Prevent PWA install prompt
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      console.log('🚫 PWA Install Prompt blocked');
+    });
+  </script>
 </head>
 
 <body>
