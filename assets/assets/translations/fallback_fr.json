@@ -1003,5 +1003,16 @@
   "WISHLIST_Msg69": "Télécharger",
   "WISHLIST_Msg70": "Partager",
   "YOUR_POSITION": "Ma position",
-  "ZONE_COMING_SOON": "Votre zone arrive bientôt"
+  "ZONE_COMING_SOON": "Votre zone arrive bientôt",
+  "PROMO_POPUP_DISCOUNT_TEXT": "DE RÉDUCTION IMMÉDIATE",
+  "PROMO_POPUP_FIRST_ORDER_TAG": "Dès votre 1ère commande",
+  "PROMO_POPUP_DESCRIPTION": "C'est votre jour de chance ! Profitez d'un coupon exclusif envoyé directement sur votre email.",
+  "PROMO_POPUP_CTA_BUTTON": "J'EN PROFITE MAINTENANT",
+  "PROMO_POPUP_SUCCESS_TITLE": "Opération réussie !",
+  "PROMO_POPUP_ERROR_TITLE": "Désolé !",
+  "PROMO_POPUP_SUCCESS_MESSAGE": "Votre code promo est en route !",
+  "PROMO_POPUP_ERROR_MESSAGE": "Une petite erreur s'est produite. Pourriez-vous réessayer ?",
+  "PROMO_POPUP_ERROR_GENERIC": "Une erreur est survenue. Veuillez réessayer.",
+  "PROMO_POPUP_SENT_TO": "Envoyé à : {email}",
+  "PROMO_POPUP_CONFIRM_BUTTON": "Compris !"
 }

@@ -661,5 +661,16 @@
   "product.status.available": "Available",
   "product.status.packages": "Number of packages",
   "product.status.title": "Status",
-  "YOUR_POSITION": "My location"
+  "YOUR_POSITION": "My location",
+  "PROMO_POPUP_DISCOUNT_TEXT": "INSTANT DISCOUNT",
+  "PROMO_POPUP_FIRST_ORDER_TAG": "On your 1st order",
+  "PROMO_POPUP_DESCRIPTION": "It's your lucky day! Enjoy an exclusive coupon sent directly to your email.",
+  "PROMO_POPUP_CTA_BUTTON": "I'LL TAKE IT NOW",
+  "PROMO_POPUP_SUCCESS_TITLE": "Operation successful!",
+  "PROMO_POPUP_ERROR_TITLE": "Sorry!",
+  "PROMO_POPUP_SUCCESS_MESSAGE": "Your promo code is on its way!",
+  "PROMO_POPUP_ERROR_MESSAGE": "A small error occurred. Could you try again?",
+  "PROMO_POPUP_ERROR_GENERIC": "An error occurred. Please try again.",
+  "PROMO_POPUP_SENT_TO": "Sent to: {email}",
+  "PROMO_POPUP_CONFIRM_BUTTON": "Got it!"
 }

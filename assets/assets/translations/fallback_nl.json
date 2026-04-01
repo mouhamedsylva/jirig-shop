@@ -992,5 +992,16 @@
   "product.status.packages": "Aantal pakketten",
   "product.status.title": "Status",
   "YOUR_POSITION": "Mijn locatie",
+  "PROMO_POPUP_DISCOUNT_TEXT": "ONMIDDELLIJKE KORTING",
+  "PROMO_POPUP_FIRST_ORDER_TAG": "Vanaf uw 1e bestelling",
+  "PROMO_POPUP_DESCRIPTION": "Het is uw geluksdag! Profiteer van een exclusieve coupon die rechtstreeks naar uw e-mail wordt verzonden.",
+  "PROMO_POPUP_CTA_BUTTON": "IK PROFITEER ER NU VAN",
+  "PROMO_POPUP_SUCCESS_TITLE": "Operatie geslaagd!",
+  "PROMO_POPUP_ERROR_TITLE": "Sorry!",
+  "PROMO_POPUP_SUCCESS_MESSAGE": "Uw promocode is onderweg!",
+  "PROMO_POPUP_ERROR_MESSAGE": "Er is een kleine fout opgetreden. Kunt u het opnieuw proberen?",
+  "PROMO_POPUP_ERROR_GENERIC": "Er is een fout opgetreden. Probeer het opnieuw.",
+  "PROMO_POPUP_SENT_TO": "Verzonden naar: {email}",
+  "PROMO_POPUP_CONFIRM_BUTTON": "Begrepen!",
   "ZONE_COMING_SOON": "Uw regio komt binnenkort"
 }
