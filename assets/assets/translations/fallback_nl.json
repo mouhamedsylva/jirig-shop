@@ -1003,5 +1003,6 @@
   "PROMO_POPUP_ERROR_GENERIC": "Er is een fout opgetreden. Probeer het opnieuw.",
   "PROMO_POPUP_SENT_TO": "Verzonden naar: {email}",
   "PROMO_POPUP_CONFIRM_BUTTON": "Begrepen!",
-  "ZONE_COMING_SOON": "Uw regio komt binnenkort"
+  "ZONE_COMING_SOON": "Uw regio komt binnenkort",
+  "SHOP_SEARCH_RESULT": "{count} resultaten"
 }

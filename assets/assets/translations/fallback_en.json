@@ -672,5 +672,6 @@
   "PROMO_POPUP_ERROR_MESSAGE": "A small error occurred. Could you try again?",
   "PROMO_POPUP_ERROR_GENERIC": "An error occurred. Please try again.",
   "PROMO_POPUP_SENT_TO": "Sent to: {email}",
-  "PROMO_POPUP_CONFIRM_BUTTON": "Got it!"
+  "PROMO_POPUP_CONFIRM_BUTTON": "Got it!",
+  "SHOP_SEARCH_RESULT": "{count} result{s}"
 }

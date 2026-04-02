@@ -1014,5 +1014,6 @@
   "PROMO_POPUP_ERROR_MESSAGE": "Une petite erreur s'est produite. Pourriez-vous réessayer ?",
   "PROMO_POPUP_ERROR_GENERIC": "Une erreur est survenue. Veuillez réessayer.",
   "PROMO_POPUP_SENT_TO": "Envoyé à : {email}",
-  "PROMO_POPUP_CONFIRM_BUTTON": "Compris !"
+  "PROMO_POPUP_CONFIRM_BUTTON": "Compris !",
+  "SHOP_SEARCH_RESULT": "{count} résultat{s}"
 }
