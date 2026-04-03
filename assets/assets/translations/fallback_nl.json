@@ -1002,5 +1002,8 @@
   "PROMO_POPUP_SENT_TO": "Verzonden naar: {email}",
   "PROMO_POPUP_CONFIRM_BUTTON": "Begrepen!",
   "ZONE_COMING_SOON": "Uw regio komt binnenkort",
-  "SHOP_SEARCH_RESULT": "{count} resultaten"
+  "SHOP_SEARCH_RESULT": "{count} resultaten",
+  "SHOP_SEARCH_LOADING": "Zoeken...",
+  "SHOP_RECENT_SEARCH": "Recent bekeken",
+  "SHOP_RESET": "Resetten"
 }

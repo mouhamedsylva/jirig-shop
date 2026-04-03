@@ -19,7 +19,7 @@
   "ACTION_SAVE": "Enregistrer",
   "ADD_COUNTRY": "Ajouter pays",
   "ADD_REMOVE_COUNTRY": "Ajouter / Supprimer un pays",
-  "ADDED_TO_CART": "ajouté dans le panier",
+  "ADDED_TO_CART": "ajouté au panier",
   "ADDRESS": "Adresse",
   "ADDRESS_EMAIL": "Email",
   "ADDRESS_FIELD_ADDRESS": "ADRESSE",
@@ -1015,5 +1015,8 @@
   "PROMO_POPUP_ERROR_GENERIC": "Une erreur est survenue. Veuillez réessayer.",
   "PROMO_POPUP_SENT_TO": "Envoyé à : {email}",
   "PROMO_POPUP_CONFIRM_BUTTON": "Compris !",
-  "SHOP_SEARCH_RESULT": "{count} résultat{s}"
+  "SHOP_SEARCH_RESULT": "{count} résultat{s}",
+  "SHOP_SEARCH_LOADING": "Recherche en cours...",
+  "SHOP_RECENT_SEARCH": "Dernières consultations",
+  "SHOP_RESET": "Réinitialiser"
 }
