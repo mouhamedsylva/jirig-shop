@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.simplifystack.jirig_web_app",
+      "sha256_cert_fingerprints": [
+        "8D:A1:DA:6E:40:24:62:D8:94:AE:D7:CC:2E:DC:EF:9C:BB:51:2B:B9:DF:EC:09:10:0E:BD:11:88:E3:EC:E5:09",
+        "0A:D5:3F:F9:87:98:A4:07:25:A3:B3:DB:98:21:4E:4B:16:99:BB:7F:8A:52:C4:9D:A9:65:7D:2D:A4:C1:AE:6A"
+      ]
+    }
+  }
+]
