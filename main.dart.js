@@ -119623,7 +119623,7 @@ return A.r(m.a4_(a1,new A.aXQ(m),"F\xe9licitations !"),$async$v3)
 case 14:s=12
 break
 case 13:s=15
-return A.r(m.a4_("L'application JIRIG.SHOP sera bient\xf4t disponible.\n\nUn email vous a \xe9t\xe9 envoy\xe9 pour b\xe9n\xe9ficier de -70% sur vos \xe9conomies.\n\nVous faites partie des premiers inscrits ! \ud83c\udf81",new A.aXR(),"\ud83c\udf89 Merci pour votre inscription !"),$async$v3)
+return A.r(m.a4_("L'application JIRIG.SHOP sera bient\xf4t disponible.\n\nUn email vous a \xe9t\xe9 envoy\xe9 pour b\xe9n\xe9ficier de -10% sur vos \xe9conomies.\n\nVous faites partie des premiers inscrits ! \ud83c\udf81",new A.aXR(),"\ud83c\udf89 Merci pour votre inscription !"),$async$v3)
 case 15:a1.dm(0,B.bc)
 case 12:s=9
 break
@@ -119758,7 +119758,7 @@ A.ad2.prototype={
 D(a){var s,r,q,p,o,n,m,l,k,j,i=this,h=null,g=A.ak(a,h,t.w).w.a.a<500,f=i.a.adt(a),e=i.a.adB(a),d=A.a([B.G,A.C(217,B.d.j()>>>16&255,B.d.j()>>>8&255,B.d.j()&255),B.G],t.W),c=t.V
 d=A.u(h,h,B.h,h,h,new A.D(h,h,h,h,A.a([new A.at(0.3,B.x,A.C(115,B.d.j()>>>16&255,B.d.j()>>>8&255,B.d.j()&255),B.p,8)],c),new A.dC(B.da,B.d9,B.ao,d,h,h),B.o),h,2.6,h,h,h,h,h,300)
 s=A.V(h,h,B.d,h,h,h,h,h,h,h,h,e,h,h,B.ab,h,h,!0,h,h,h,h,h,h,h,h)
-s=A.a6M(A.d_(A.a([B.auX,B.av_],t.VO),h,h,h,h,h,h,h,h,s,h),h,h,h,B.Y)
+s=A.a6M(A.d_(A.a([B.av_,B.auZ],t.VO),h,h,h,h,h,h,h,h,s,h),h,h,h,B.Y)
 r=g?14:16
 q=t.p
 r=A.qF(B.j_,A.a([s,B.dm,A.az(B.mb,h,h,A.C(153,B.d.j()>>>16&255,B.d.j()>>>8&255,B.d.j()&255),h,h,h,h,h,h,h,r,h,h)],q),B.uJ,0,0)
@@ -142085,10 +142085,10 @@ B.auU=new A.f5(" moins chers\nlivr\xe9s chez vous",null,null,B.b6,null,null,null
 B.aAB=new A.n(!0,B.fN,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.auV=new A.f5("IKEA",null,null,B.b6,null,null,null,null,null,null,B.aAB)
 B.auW=new A.f5("Vos articles ",null,null,B.b6,null,null,null,null,null,null,null)
+B.auZ=new A.f5(" aux 75 premiers inscrits",null,null,B.b6,null,null,null,null,null,null,null)
 B.Za=new A.k(1,0.9019607843137255,0.7450980392156863,0.27058823529411763,B.i)
 B.axH=new A.n(!0,B.Za,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.auX=new A.f5("-70%",null,null,B.b6,null,null,null,null,null,null,B.axH)
-B.av_=new A.f5(" aux 75 premiers inscrits",null,null,B.b6,null,null,null,null,null,null,null)
+B.av_=new A.f5("-10%",null,null,B.b6,null,null,null,null,null,null,B.axH)
 B.Xg=new A.k(1,0.7254901960784313,0.10980392156862745,0.10980392156862745,B.i)
 B.ue=new A.n(!0,B.Xg,null,null,null,null,13,B.a_,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.av2=new A.n(!0,null,null,null,null,null,16,B.y,null,0.2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
@@ -142535,11 +142535,11 @@ B.azk=new A.n(!0,B.B,null,".AppleSystemUIFont",null,null,null,null,null,null,nul
 B.azP=new A.n(!0,B.k,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.t,null,null,null,"blackRedwoodCity labelMedium",null,null,null,null)
 B.avo=new A.n(!0,B.k,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.t,null,null,null,"blackRedwoodCity labelSmall",null,null,null,null)
 B.aBe=new A.fF(B.axZ,B.awt,B.ay_,B.ayG,B.aw_,B.awd,B.awV,B.ayv,B.ax9,B.azp,B.ave,B.avF,B.azk,B.azP,B.avo)
-B.auY=new A.f5("\ud83c\udf81  OFFRE LIMIT\xc9E  \ud83c\udf81",null,null,B.b6,null,null,null,null,null,null,null)
-B.agV=s([B.auY],t.VO)
+B.auX=new A.f5("\ud83c\udf81  OFFRE LIMIT\xc9E  \ud83c\udf81",null,null,B.b6,null,null,null,null,null,null,null)
+B.agV=s([B.auX],t.VO)
 B.awS=new A.n(!0,B.fN,null,null,null,null,18,B.y,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.auZ=new A.f5(null,B.agV,null,B.b6,null,null,null,null,null,null,B.awS)
-B.aBf=new A.c9(null,B.auZ,null,B.Y,null,null,null,null,null,null)
+B.auY=new A.f5(null,B.agV,null,B.b6,null,null,null,null,null,null,B.awS)
+B.aBf=new A.c9(null,B.auY,null,B.Y,null,null,null,null,null,null)
 B.aBi=new A.c9("App Store",null,B.uh,null,null,null,null,null,null,null)
 B.aBj=new A.c9("Jirig Shop",null,B.ul,null,null,null,null,null,null,null)
 B.aBk=new A.c9("Filtres",null,B.uj,null,null,null,null,null,null,null)
