@@ -119623,7 +119623,7 @@ return A.r(m.a4_(a1,new A.aXQ(m),"F\xe9licitations !"),$async$v3)
 case 14:s=12
 break
 case 13:s=15
-return A.r(m.a4_("L'application JIRIG.SHOP sera bient\xf4t disponible.\n\nUn email vous a \xe9t\xe9 envoy\xe9 pour b\xe9n\xe9ficier de -10% sur vos \xe9conomies.\n\nVous faites partie des premiers inscrits ! \ud83c\udf81",new A.aXR(),"\ud83c\udf89 Merci pour votre inscription !"),$async$v3)
+return A.r(m.a4_("L'application JIRIG.SHOP sera bient\xf4t disponible.\n\nUn email vous a \xe9t\xe9 envoy\xe9 pour b\xe9n\xe9ficier de -15% sur vos \xe9conomies.\n\nVous faites partie des premiers inscrits ! \ud83c\udf81",new A.aXR(),"\ud83c\udf89 Merci pour votre inscription !"),$async$v3)
 case 15:a1.dm(0,B.bc)
 case 12:s=9
 break
@@ -142088,7 +142088,7 @@ B.auW=new A.f5("Vos articles ",null,null,B.b6,null,null,null,null,null,null,null
 B.auZ=new A.f5(" aux 75 premiers inscrits",null,null,B.b6,null,null,null,null,null,null,null)
 B.Za=new A.k(1,0.9019607843137255,0.7450980392156863,0.27058823529411763,B.i)
 B.axH=new A.n(!0,B.Za,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.av_=new A.f5("-10%",null,null,B.b6,null,null,null,null,null,null,B.axH)
+B.av_=new A.f5("-15%",null,null,B.b6,null,null,null,null,null,null,B.axH)
 B.Xg=new A.k(1,0.7254901960784313,0.10980392156862745,0.10980392156862745,B.i)
 B.ue=new A.n(!0,B.Xg,null,null,null,null,13,B.a_,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.av2=new A.n(!0,null,null,null,null,null,16,B.y,null,0.2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
