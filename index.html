@@ -117,7 +117,7 @@
       });
     });
   </script>
-  <script>
+  <!-- <script>
     // 🚫 Désactiver totalement le service worker AVANT qu'il s'enregistre
     if ('serviceWorker' in navigator) {
       Object.defineProperty(navigator, 'serviceWorker', {
@@ -125,7 +125,7 @@
       });
       console.log('🚫 Service Worker totalement désactivé');
     }
-  </script>
+  </script> -->
   <!-- Hide Tawk.to on mobile devices 
   <style>
     @media (max-width: 767px) {
@@ -182,12 +182,13 @@
     });
   </script>
   <!-- <script src="main.dart.js?v=1.0.1" defer></script> -->
-   <script>
-    // On ajoute un timestamp aléatoire à chaque chargement
-    var script = document.createElement('script');
-    script.src = 'main.dart.js?t=' + new Date().getTime();
-    script.defer = true;
-    document.body.appendChild(script);
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      var script = document.createElement('script');
+      script.src = 'main.dart.js?t=' + new Date().getTime();
+      script.defer = true;
+      document.body.appendChild(script);
+    });
   </script>
 </head>
 
@@ -200,13 +201,13 @@
     For more details:
     * https://docs.flutter.dev/platform-integration/web/initialization
   -->
-  <script>
+  <!-- <script>
     window.flutterConfiguration = {
       serviceWorker: {
         serviceWorkerVersion: null
       }
     };
-  </script>
+  </script> -->
 <script src="flutter_bootstrap.js" async></script>
 </body>
 
