@@ -117,6 +117,16 @@
       });
     });
   </script>
+  <script>
+    // Vérifie si une nouvelle version est disponible et recharge automatiquement
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for (let registration of registrations) {
+          registration.unregister(); // Supprime l'ancien service worker qui bloque tout
+        }
+      });
+    }
+  </script>
   <!-- Hide Tawk.to on mobile devices 
   <style>
     @media (max-width: 767px) {
