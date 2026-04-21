@@ -191,17 +191,36 @@
     });
   </script> -->
 
-  <!-- <script>
-    // Force le rechargement via le fichier version.json
+  <script>
+    // 1. On récupère la version pour le cache busting
     fetch('version.json?t=' + new Date().getTime())
       .then(r => r.json())
       .then(data => {
-        var script = document.createElement('script');
-        script.src = 'main.dart.js?v=' + data.v;
-        script.defer = true;
+        const appVersion = data.v;
+        const mainScriptUrl = 'main.dart.js?v=' + appVersion;
+
+        // 2. On charge manuellement le moteur Flutter
+        // Cela remplace l'ancien flutter_bootstrap.js automatique
+        import("./flutter_bootstrap.js")
+          .then((module) => {
+            // On utilise l'initialiseur de Flutter avec notre URL personnalisée
+            module.userConfig = {
+              mainUri: mainScriptUrl, // C'est ici que ton cache busting s'applique
+              serviceWorker: {
+                serviceWorkerVersion: null // Désactive le SW si tu n'en veux pas
+              }
+            };
+          });
+      })
+      .catch(err => {
+        // Fallback au cas où le fetch échoue
+        console.error('Erreur lors du chargement de la version:', err);
+        const script = document.createElement('script');
+        script.src = "flutter_bootstrap.js";
+        script.async = true;
         document.body.appendChild(script);
       });
-  </script> -->
+  </script>
 </head>
 
 <body>
@@ -220,7 +239,7 @@
       }
     };
   </script> -->
-<script src="flutter_bootstrap.js" async></script>
+<!-- <script src="flutter_bootstrap.js" async></script> -->
 </body>
 
 </html>
