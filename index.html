@@ -192,32 +192,35 @@
   </script> -->
 
   <script>
-    // 1. On récupère la version
-    fetch('version.json?t=' + new Date().getTime())
+    // 1. On récupère le numéro de version de manière unique
+    fetch('version.json?t=' + new Date().getTime(), {
+      cache: "no-store" // Empêche le navigateur de mettre en cache le fichier version.json lui-même
+    })
       .then(r => r.json())
       .then(data => {
         const appVersion = data.v;
         const mainScriptUrl = 'main.dart.js?v=' + appVersion;
 
-        // 2. CONFIGURATION GLOBALE (Lue par flutter_bootstrap.js au démarrage)
-        // On définit l'URI AVANT d'importer le bootstrap
+        // 2. CONFIGURATION CRUCIALE
+        // On définit l'URI AVANT l'import pour que le bootstrap ne puisse pas charger le fichier par défaut
         window.flutterConfiguration = {
           mainUri: mainScriptUrl,
           serviceWorker: {
-            serviceWorkerVersion: null
+            serviceWorkerVersion: null // INDISPENSABLE : tue le cache persistant du Service Worker
           }
         };
 
-        console.log('Injecting Flutter config with version:', appVersion);
+        console.log('🚀 Chargement de la version forcée :', appVersion);
 
-        // 3. Importation du bootstrap
-        // Maintenant qu'il est importé, il lira window.flutterConfiguration
-        import("./flutter_bootstrap.js");
+        // 3. Import dynamique
+        return import("./flutter_bootstrap.js");
       })
       .catch(err => {
-        console.error('Erreur version.json, fallback...', err);
-        // Fallback si le fetch échoue
-        import("./flutter_bootstrap.js");
+        console.error('Erreur versioning, chargement de secours...', err);
+        // En cas d'échec du fetch, on charge le bootstrap sans config spéciale
+        const script = document.createElement('script');
+        script.src = "flutter_bootstrap.js";
+        document.head.appendChild(script);
       });
   </script>
 </head>
