@@ -1,89 +1,226 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.12.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.12.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.12.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.12.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.12.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.12.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.12.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.12.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.12.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.12.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta name="description"
+    content="Optimisez vos achats avec JIRIG Shop. Mandataire indépendant, nous achetons et livrons vos articles (IKEA® et autres références) depuis les marchés européens vers votre domicile en Belgique.">
+  <meta name="keywords"
+    content="JIRIG Shop, JIRIG, shopping, mandataire, Europe, Belgique, livraison, IKEA, achat en ligne, transport de colis">
+  <meta name="author" content="JIRIG Shop">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jirig.shop/">
+  <meta property="og:title" content="JIRIG Shop | Votre mandataire pour vos achats en Europe">
+  <meta property="og:description"
+    content="Faites vos achats en Europe en toute simplicité. Nous achetons et livrons vos articles préférés chez vous en Belgique.">
+  <meta property="og:image" content="https://jirig.shop/icons/Icon-512.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://jirig.shop/">
+  <meta property="twitter:title" content="JIRIG Shop | Votre mandataire pour vos achats en Europe">
+  <meta property="twitter:description"
+    content="Faites vos achats en Europe en toute simplicité. Nous achetons et livrons vos articles préférés chez vous en Belgique.">
+  <meta property="twitter:image" content="https://jirig.shop/icons/Icon-512.png">
+
+  <!-- iOS meta tags & icons -->
+  <!-- <meta name="mobile-web-app-capable" content="yes"> -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="JIRIG Shop">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  
+  <!-- Add extra icon links for Google Search -->
+  <link rel="icon" sizes="192x192" href="icons/Icon-192.png">
+  <link rel="icon" sizes="512x512" href="icons/Icon-512.png">
+
+  <title>JIRIG Shop | Votre mandataire pour vos achats en Europe & Livraison en Belgique</title>
+  <!-- <link rel="manifest" href="manifest.json"> -->
+
+  <!-- Google Sign-In Configuration -->
+  <!-- IMPORTANT: Remplacez VOTRE_CLIENT_ID par votre vrai Client ID Google -->
+  <!-- Obtenez-le depuis: https://console.cloud.google.com/ -->
+  <meta name="google-signin-client_id"
+    content="116497000948-90d84akvtp9g4favfmi63ciktp5rbgfu.apps.googleusercontent.com">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <!-- Facebook SDK for JavaScript -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '1412145146538940',
+        cookie: true,
+        xfbml: true,
+        version: 'v21.0'
+      });
+
+      FB.AppEvents.logPageView();
+      console.log('✅ Facebook SDK initialisé');
+
+      // Marquer le SDK comme prêt
+      window.fbSDKReady = true;
+    };
+
+    // Charger le SDK Facebook
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) { return; }
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/fr_FR/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <script>
+    // Dynamically update SEO tags based on current domain (jirig.be, jirig.shop, jirig.com)
+    window.addEventListener('load', function () {
+      var currentOrigin = window.location.origin;
+      var canonicalUrl = currentOrigin + '/';
+
+      // Update og:url and twitter:url
+      var urlTags = document.querySelectorAll('meta[property$="url"]');
+      urlTags.forEach(function (tag) {
+        tag.setAttribute('content', canonicalUrl);
+      });
+
+      // Update og:image and twitter:image to be absolute based on current domain
+      var imageTags = document.querySelectorAll('meta[property$="image"]');
+      imageTags.forEach(function (tag) {
+        var content = tag.getAttribute('content');
+        if (content && content.includes('/icons/')) {
+          var iconPath = content.substring(content.indexOf('/icons/'));
+          tag.setAttribute('content', currentOrigin + iconPath);
         }
       });
-    </script>
-  </body>
+    });
+  </script>
+  <!-- <script>
+    // 🚫 Désactiver totalement le service worker AVANT qu'il s'enregistre
+    if ('serviceWorker' in navigator) {
+      Object.defineProperty(navigator, 'serviceWorker', {
+        value: undefined
+      });
+      console.log('🚫 Service Worker totalement désactivé');
+    }
+  </script> -->
+  <!-- Hide Tawk.to on mobile devices 
+  <style>
+    @media (max-width: 767px) {
+      #tawk-bubble-container,
+      #tawk-chat-container,
+      .tawk-app,
+      .tawk-minimized,
+      .tawk-maximized,
+      iframe[title="chat widget"] {
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+    }
+  </style>
+  -->
+
+  <!--Start of Tawk.to Script
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+
+    // Définir la condition mobile (seuil standard 768px ou agent mobile)
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+
+    // Fallback : Masquer le widget via l'API si le chargement n'a pas été empêché
+    Tawk_API.onLoad = function () {
+      if (isMobile || window.innerWidth < 768) {
+        Tawk_API.hideWidget();
+      }
+    };
+
+    (function () {
+      // Ne pas charger le script Tawk.to du tout sur les appareils mobiles
+      if (isMobile) {
+        console.log('Tawk logic initialization: Bypassing Tawk on mobile.');
+        return;
+      }
+
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/69baa6fd25f53e1c37bb8bd6/1jk0hojqh';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  End of Tawk.to Script-->
+  
+  <script>
+    // Prevent PWA install prompt
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      console.log('🚫 PWA Install Prompt blocked');
+    });
+  </script>
+  <!-- <script src="main.dart.js?v=1.0.1" defer></script> -->
+  <!-- <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      var script = document.createElement('script');
+      script.src = 'main.dart.js?t=' + new Date().getTime();
+      script.defer = true;
+      document.body.appendChild(script);
+    });
+  </script> -->
+
+  <script>
+    // Force le rechargement via le fichier version.json
+    fetch('version.json?t=' + new Date().getTime())
+      .then(r => r.json())
+      .then(data => {
+        var script = document.createElement('script');
+        script.src = 'main.dart.js?v=' + data.v;
+        script.defer = true;
+        document.body.appendChild(script);
+      });
+  </script>
+</head>
+
+<body>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <!-- <script>
+    window.flutterConfiguration = {
+      serviceWorker: {
+        serviceWorkerVersion: null
+      }
+    };
+  </script> -->
+<script src="flutter_bootstrap.js" async></script>
+</body>
+
 </html>
