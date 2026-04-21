@@ -192,33 +192,32 @@
   </script> -->
 
   <script>
-    // 1. On récupère la version pour le cache busting
+    // 1. On récupère la version
     fetch('version.json?t=' + new Date().getTime())
       .then(r => r.json())
       .then(data => {
         const appVersion = data.v;
         const mainScriptUrl = 'main.dart.js?v=' + appVersion;
 
-        // 2. On charge manuellement le moteur Flutter
-        // Cela remplace l'ancien flutter_bootstrap.js automatique
-        import("./flutter_bootstrap.js")
-          .then((module) => {
-            // On utilise l'initialiseur de Flutter avec notre URL personnalisée
-            module.userConfig = {
-              mainUri: mainScriptUrl, // C'est ici que ton cache busting s'applique
-              serviceWorker: {
-                serviceWorkerVersion: null // Désactive le SW si tu n'en veux pas
-              }
-            };
-          });
+        // 2. CONFIGURATION GLOBALE (Lue par flutter_bootstrap.js au démarrage)
+        // On définit l'URI AVANT d'importer le bootstrap
+        window.flutterConfiguration = {
+          mainUri: mainScriptUrl,
+          serviceWorker: {
+            serviceWorkerVersion: null
+          }
+        };
+
+        console.log('Injecting Flutter config with version:', appVersion);
+
+        // 3. Importation du bootstrap
+        // Maintenant qu'il est importé, il lira window.flutterConfiguration
+        import("./flutter_bootstrap.js");
       })
       .catch(err => {
-        // Fallback au cas où le fetch échoue
-        console.error('Erreur lors du chargement de la version:', err);
-        const script = document.createElement('script');
-        script.src = "flutter_bootstrap.js";
-        script.async = true;
-        document.body.appendChild(script);
+        console.error('Erreur version.json, fallback...', err);
+        // Fallback si le fetch échoue
+        import("./flutter_bootstrap.js");
       });
   </script>
 </head>
