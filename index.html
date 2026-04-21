@@ -192,35 +192,13 @@
   </script> -->
 
   <script>
-    // 1. On récupère le numéro de version de manière unique
-    fetch('version.json?t=' + new Date().getTime(), {
-      cache: "no-store" // Empêche le navigateur de mettre en cache le fichier version.json lui-même
-    })
+    fetch('version.json?t=' + new Date().getTime())
       .then(r => r.json())
       .then(data => {
-        const appVersion = data.v;
-        const mainScriptUrl = 'main.dart.js?v=' + appVersion;
-
-        // 2. CONFIGURATION CRUCIALE
-        // On définit l'URI AVANT l'import pour que le bootstrap ne puisse pas charger le fichier par défaut
-        window.flutterConfiguration = {
-          mainUri: mainScriptUrl,
-          serviceWorker: {
-            serviceWorkerVersion: null // INDISPENSABLE : tue le cache persistant du Service Worker
-          }
-        };
-
-        console.log('🚀 Chargement de la version forcée :', appVersion);
-
-        // 3. Import dynamique
-        return import("./flutter_bootstrap.js");
-      })
-      .catch(err => {
-        console.error('Erreur versioning, chargement de secours...', err);
-        // En cas d'échec du fetch, on charge le bootstrap sans config spéciale
-        const script = document.createElement('script');
-        script.src = "flutter_bootstrap.js";
-        document.head.appendChild(script);
+        var script = document.createElement('script');
+        script.src = 'flutter_bootstrap.js?v=' + data.v;
+        script.defer = true;
+        document.body.appendChild(script);
       });
   </script>
 </head>
