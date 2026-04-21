@@ -118,13 +118,12 @@
     });
   </script>
   <script>
-    // Vérifie si une nouvelle version est disponible et recharge automatiquement
+    // 🚫 Désactiver totalement le service worker AVANT qu'il s'enregistre
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then(function(registrations) {
-        for (let registration of registrations) {
-          registration.unregister(); // Supprime l'ancien service worker qui bloque tout
-        }
+      Object.defineProperty(navigator, 'serviceWorker', {
+        value: undefined
       });
+      console.log('🚫 Service Worker totalement désactivé');
     }
   </script>
   <!-- Hide Tawk.to on mobile devices 
@@ -182,7 +181,14 @@
       console.log('🚫 PWA Install Prompt blocked');
     });
   </script>
-  <script src="main.dart.js?v=1.0.1" defer></script>
+  <!-- <script src="main.dart.js?v=1.0.1" defer></script> -->
+   <script>
+    // On ajoute un timestamp aléatoire à chaque chargement
+    var script = document.createElement('script');
+    script.src = 'main.dart.js?t=' + new Date().getTime();
+    script.defer = true;
+    document.body.appendChild(script);
+  </script>
 </head>
 
 <body>
@@ -194,7 +200,14 @@
     For more details:
     * https://docs.flutter.dev/platform-integration/web/initialization
   -->
-  <script src="flutter_bootstrap.js" async></script>
+  <script>
+    window.flutterConfiguration = {
+      serviceWorker: {
+        serviceWorkerVersion: null
+      }
+    };
+  </script>
+<script src="flutter_bootstrap.js" async></script>
 </body>
 
 </html>
