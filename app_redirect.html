@@ -169,31 +169,40 @@
     </div>
     
     <script>
-        // Détection de la plateforme et redirection automatique
+        // Détection de la plateforme et redirection automatique IMMÉDIATE
         (function() {
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
             
-            // Détection iOS
-            const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+            console.log('User Agent:', userAgent); // Debug
             
-            // Détection Android
-            const isAndroid = /android/i.test(userAgent);
+            // Détection iOS (plus complète)
+            const isIOS = (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) || 
+                          (navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform));
             
-            // Si mobile, rediriger automatiquement après 1 seconde
-            if (isIOS || isAndroid) {
-                // Afficher le message de redirection
-                document.getElementById('redirecting').style.display = 'block';
-                document.getElementById('manual-links').style.display = 'none';
-                
-                setTimeout(function() {
-                    if (isIOS) {
-                        window.location.href = 'https://apps.apple.com/sn/app/moytou-mbeund/id6667094338?l=fr-FR';
-                    } else if (isAndroid) {
-                        window.location.href = 'https://play.google.com/store/apps/details?id=com.simplifystack.moytou_mbeund_app';
-                    }
-                }, 1000);
+            // Détection Android (plus complète)
+            const isAndroid = /android/i.test(userAgent) || 
+                             /Android/i.test(navigator.platform);
+            
+            console.log('Is iOS:', isIOS); // Debug
+            console.log('Is Android:', isAndroid); // Debug
+            
+            // REDIRECTION IMMÉDIATE pour mobile
+            if (isIOS) {
+                console.log('Redirecting to App Store...'); // Debug
+                // Redirection immédiate vers App Store
+                window.location.replace('https://apps.apple.com/sn/app/moytou-mbeund/id6667094338?l=fr-FR');
+                return; // Arrêter l'exécution
             }
             
+            if (isAndroid) {
+                console.log('Redirecting to Google Play...'); // Debug
+                // Redirection immédiate vers Google Play
+                window.location.replace('https://play.google.com/store/apps/details?id=com.simplifystack.moytou_mbeund_app');
+                return; // Arrêter l'exécution
+            }
+            
+            // Si on arrive ici, c'est un desktop
+            console.log('Desktop detected - showing buttons'); // Debug
             // Sur desktop, afficher les deux boutons (comportement par défaut)
         })();
     </script>
