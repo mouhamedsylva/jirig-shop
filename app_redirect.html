@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Télécharger Jirig Shop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            color: #0058A3;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .redirect-message {
+            background: #E3F2FD;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            color: #0058A3;
+            font-weight: 500;
+        }
+        
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #0058A3;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .store-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .store-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            color: white;
+        }
+        
+        .store-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .app-store {
+            background: #000;
+        }
+        
+        .play-store {
+            background: #0058A3;
+        }
+        
+        .icon {
+            font-size: 28px;
+        }
+        
+        .button-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .button-text small {
+            font-size: 11px;
+            opacity: 0.8;
+            font-weight: 400;
+        }
+        
+        .button-text span {
+            font-size: 16px;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Jirig 🛒</div>
+        <h1>Téléchargez notre application</h1>
+        <p>Profitez d'une expérience d'achat optimisée sur votre mobile</p>
+        
+        <div id="redirecting" class="redirect-message" style="display: none;">
+            <div class="spinner"></div>
+            <p style="margin: 0; color: #0058A3;">Redirection en cours...</p>
+        </div>
+        
+        <div id="manual-links" class="store-buttons">
+            <a href="https://apps.apple.com/sn/app/moytou-mbeund/id6667094338?l=fr-FR" class="store-button app-store" id="app-store-btn">
+                <span class="icon">🍎</span>
+                <div class="button-text">
+                    <small>Télécharger sur</small>
+                    <span>App Store</span>
+                </div>
+            </a>
+            
+            <a href="https://play.google.com/store/apps/details?id=com.simplifystack.moytou_mbeund_app" class="store-button play-store" id="play-store-btn">
+                <span class="icon">▶️</span>
+                <div class="button-text">
+                    <small>Disponible sur</small>
+                    <span>Google Play</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        // Détection de la plateforme et redirection automatique
+        (function() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            
+            // Détection iOS
+            const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+            
+            // Détection Android
+            const isAndroid = /android/i.test(userAgent);
+            
+            // Si mobile, rediriger automatiquement après 1 seconde
+            if (isIOS || isAndroid) {
+                // Afficher le message de redirection
+                document.getElementById('redirecting').style.display = 'block';
+                document.getElementById('manual-links').style.display = 'none';
+                
+                setTimeout(function() {
+                    if (isIOS) {
+                        window.location.href = 'https://apps.apple.com/sn/app/moytou-mbeund/id6667094338?l=fr-FR';
+                    } else if (isAndroid) {
+                        window.location.href = 'https://play.google.com/store/apps/details?id=com.simplifystack.moytou_mbeund_app';
+                    }
+                }, 1000);
+            }
+            
+            // Sur desktop, afficher les deux boutons (comportement par défaut)
+        })();
+    </script>
+</body>
+</html>
