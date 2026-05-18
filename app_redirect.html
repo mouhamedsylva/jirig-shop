@@ -101,34 +101,49 @@
             // Vérifier si l'utilisateur a déjà été redirigé (retour arrière)
             const hasBeenRedirected = sessionStorage.getItem(REDIRECT_KEY);
             
-            if (isIOS || isAndroid) {
+            if (isAndroid) {
                 if (!hasBeenRedirected) {
-                    // 🔥 PREMIÈRE VISITE : Redirection immédiate vers le store
                     sessionStorage.setItem(REDIRECT_KEY, 'true');
-                    
-                    if (isIOS) {
-                        window.location.replace('https://apps.apple.com/sn/app/moytou-mbeund/id6667094338?l=fr-FR');
-                    } else {
-                        window.location.replace('https://play.google.com/store/apps/details?id=com.simplifystack.jirigWebApp');
-                    }
+                    window.location.replace('https://play.google.com/store/apps/details?id=com.simplifystack.jirigWebApp');
                 } else {
-                    // 🔄 RETOUR ARRIÈRE : Redirection vers jirig.shop
                     window.location.replace('https://jirig.shop');
                 }
+
+            } else if (isIOS) {
+                // 🍎 iOS : Pas encore disponible
+                // window.location.replace('https://apps.apple.com/sn/app/moytou-mbeund/id6667094338?l=fr-FR');
+                window.addEventListener('DOMContentLoaded', function() {
+                    document.body.innerHTML = `
+                        <div style="text-align:center; padding:40px 20px; color:white; max-width:420px;">
+                            <div style="margin-bottom:16px;"><img src="apple_logo.png" alt="App Store" width="60" height="60"></div>
+                            <h2 style="font-size:22px; font-weight:700; margin-bottom:12px;">Bientôt disponible sur iOS</h2>
+                            <p style="font-size:16px; line-height:1.6; opacity:0.88; margin-bottom:24px;">
+                                L'application <strong>Jirig</strong> est actuellement en cours de déploiement 
+                                sur l'App Store. Nous vous informerons dès sa disponibilité.
+                            </p>
+                            <a href="https://jirig.shop" style="background:white; color:#0058A3; padding:12px 28px; border-radius:8px; text-decoration:none; font-weight:600; font-size:15px;">
+                                Visiter jirig.shop
+                            </a>
+                            <p style="font-size:13px; opacity:0.6; margin-top:20px;">Disponible dès maintenant sur Android ✅</p>
+                        </div>
+                    `;
+                });
             } else {
                 // 💻 DESKTOP : Afficher les deux liens
                 window.addEventListener('DOMContentLoaded', function() {
                     document.body.innerHTML = `
                         <div class="message-container">
-                            <h1>Jirig 🛒</h1>
-                            <p>Scannez ce QR code avec votre mobile pour télécharger l'application</p>
+                            <h1>Jirig ⬇️</h1>
+                            <p>Télécharger l'application</p>
                             <div class="store-links">
+                                <!-- 
                                 <a href="https://apps.apple.com/sn/app/moytou-mbeund/id6667094338?l=fr-FR" class="store-link">
-                                    <span>🍎</span>
+                                    <img src="apple_logo.png" alt="App Store" width="24" height="24">
                                     <span>App Store</span>
-                                </a>
+                                </a> 
+                                -->
                                 <a href="https://play.google.com/store/apps/details?id=com.simplifystack.jirigWebApp" class="store-link">
-                                    <span>▶️</span>
+                                    <img src="playstore_logo.png" alt="Google Play" width="24" height="24">
                                     <span>Google Play</span>
                                 </a>
                             </div>
