@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirection...</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Repli sans JavaScript : redirige au bout de 1s si le script ne s'exécute pas -->
+    <noscript>
+        <meta http-equiv="refresh" content="1; url=https://jirig.shop">
+    </noscript>
+
     <style>
         body {
             margin: 0;
@@ -16,12 +21,13 @@
             min-height: 100vh;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
-        
+
         .loader {
             text-align: center;
             color: white;
+            padding: 20px;
         }
-        
+
         .spinner {
             border: 4px solid rgba(255, 255, 255, 0.3);
             border-top: 4px solid white;
@@ -31,135 +37,74 @@
             animation: spin 0.8s linear infinite;
             margin: 0 auto 20px;
         }
-        
+
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        
+
         p {
             margin: 0;
             font-size: 16px;
             opacity: 0.9;
         }
-        
-        .message-container {
-            text-align: center;
-            padding: 40px 20px;
-            color: white;
-            max-width: 500px;
-        }
-        
-        .message-container h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        
-        .message-container p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        
-        .store-links {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-        
-        .store-link {
+
+        /* Lien de secours : masqué au départ, affiché si la redirection n'aboutit pas */
+        .fallback-link {
+            display: none;
             background: white;
             color: #0058A3;
-            padding: 15px 30px;
-            border-radius: 10px;
+            padding: 12px 28px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: transform 0.2s;
-        }
-        
-        .store-link:hover {
-            transform: translateY(-2px);
+            font-size: 15px;
+            margin-top: 24px;
         }
     </style>
-    
-    <script>
-        // 🚀 REDIRECTION INTELLIGENTE avec détection de retour arrière
-        (function() {
-            const REDIRECT_KEY = 'jirig_redirected';
-            const ua = navigator.userAgent || navigator.vendor || window.opera;
-            
-            // Détection iOS
-            const isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
-            
-            // Détection Android
-            const isAndroid = /android/i.test(ua);
-            
-            // Vérifier si l'utilisateur a déjà été redirigé (retour arrière)
-            const hasBeenRedirected = sessionStorage.getItem(REDIRECT_KEY);
-            
-            if (isAndroid) {
-                if (!hasBeenRedirected) {
-                    sessionStorage.setItem(REDIRECT_KEY, 'true');
-                    window.location.replace('https://play.google.com/store/apps/details?id=com.simplifystack.jirigWebApp');
-                } else {
-                    window.location.replace('https://jirig.shop');
-                }
 
-            } else if (isIOS) {
-                // 🍎 iOS : Pas encore disponible
-                // window.location.replace('https://apps.apple.com/sn/app/moytou-mbeund/id6667094338?l=fr-FR');
-                window.addEventListener('DOMContentLoaded', function() {
-                    document.body.innerHTML = `
-                        <div style="text-align:center; padding:40px 20px; color:white; max-width:420px;">
-                            <div style="margin-bottom:16px;"><i class="fa-brands fa-apple" style="font-size: 60px;"></i></div>
-                            <h2 style="font-size:22px; font-weight:700; margin-bottom:12px;">Bientôt disponible sur iOS</h2>
-                            <p style="font-size:16px; line-height:1.6; opacity:0.88; margin-bottom:24px;">
-                                L'application <strong>Jirig Shop</strong> est actuellement en cours de déploiement 
-                                sur l'App Store. Nous vous informerons dès sa disponibilité.
-                            </p>
-                            <a href="https://jirig.shop" style="background:white; color:#0058A3; padding:12px 28px; border-radius:8px; text-decoration:none; font-weight:600; font-size:15px;">
-                                Visiter jirig.shop
-                            </a>
-                            <p style="font-size:13px; opacity:0.6; margin-top:20px;">Disponible dès maintenant sur Android ✅</p>
-                        </div>
-                    `;
-                });
-            } else {
-                // 💻 DESKTOP : Afficher les deux liens
-                window.addEventListener('DOMContentLoaded', function() {
-                    document.body.innerHTML = `
-                        <div class="message-container">
-                            <h1>Jirig Shop ⬇️</h1>
-                            <p>Télécharger l'application</p>
-                            <div class="store-links">
-                                <!-- 
-                                <a href="https://apps.apple.com/sn/app/moytou-mbeund/id6667094338?l=fr-FR" class="store-link">
-                                    <i class="fa-brands fa-apple"></i>
-                                    <span>App Store</span>
-                                </a> 
-                                -->
-                                <a href="https://play.google.com/store/apps/details?id=com.simplifystack.jirigWebApp" class="store-link">
-                                    <i class="fa-brands fa-google-play"></i>
-                                    <span>Google Play</span>
-                                </a>
-                            </div>
-                        </div>
-                    `;
-                });
+    <script>
+        // Redirection vers le site web, quelle que soit la plateforme.
+        //
+        // Cette page est la cible des QR codes déjà imprimés (affiches, flyers).
+        // Elle redirigeait auparavant vers Google Play / App Store ; elle pointe
+        // désormais vers le site web. Conserver cette URL en ligne : c'est le
+        // point de contrôle qui permet de changer la destination des supports
+        // physiques sans les réimprimer.
+        (function () {
+            var TARGET = 'https://jirig.shop';
+
+            // Sécurité anti-boucle : si cette page est servie depuis jirig.shop et
+            // que la cible est la même origine, on ne se redirige pas sur soi-même.
+            try {
+                var target = new URL(TARGET);
+                var samePage = target.origin === window.location.origin &&
+                    target.pathname.replace(/\/+$/, '') === window.location.pathname.replace(/\/+$/, '');
+                if (samePage) return;
+            } catch (e) {
+                // URL non supportée (très vieux navigateur) : on redirige quand même
             }
+
+            // replace() plutôt que href : la page de redirection ne reste pas dans
+            // l'historique, donc le bouton « retour » ne ramène pas ici.
+            window.location.replace(TARGET);
         })();
     </script>
 </head>
 <body>
-    <!-- Loader minimal affiché pendant la redirection (visible < 100ms) -->
     <div class="loader">
         <div class="spinner"></div>
-        <p>Redirection...</p>
+        <p>Redirection vers jirig.shop...</p>
+        <a id="fallback" class="fallback-link" href="https://jirig.shop">Continuer vers jirig.shop</a>
     </div>
+
+    <script>
+        // Si la redirection n'a pas abouti au bout de 2,5s (blocage, réseau lent),
+        // proposer un lien manuel plutôt que de laisser un spinner infini.
+        setTimeout(function () {
+            var link = document.getElementById('fallback');
+            if (link) link.style.display = 'inline-block';
+        }, 2500);
+    </script>
 </body>
 </html>
